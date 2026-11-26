@@ -1,0 +1,53 @@
+{
+  "format": 2,
+  "id": "rac2-ng-plus-minigames",
+  "name": "Challenge Minigame Skip",
+  "version": "0.2.1",
+  "description": "Skips enabled minigame types in Challenge Mode using the game's own completion transitions.",
+  "license": "GPL-3.0-or-later",
+  "api": "1.36",
+  "multiplayer": "gameplay",
+  "games": {
+    "rac2": [
+      "pal"
+    ]
+  },
+  "load": {
+    "after": [
+      "ng-plus-plus"
+    ]
+  },
+  "hooks": [
+    "rac2.moby.race_controller.update"
+  ],
+  "settings": [
+    {
+      "key": "skip_infiltrator",
+      "name": "Infiltrator puzzles",
+      "type": "bool",
+      "default": true,
+      "description": "Completes the Infiltrator puzzle after opening it in Challenge Mode."
+    },
+    {
+      "key": "skip_hoverbike",
+      "name": "Hoverbike races",
+      "type": "bool",
+      "default": true,
+      "description": "Finishes Barlow and Joba hoverbike races after their countdown in Challenge Mode."
+    },
+    {
+      "key": "skip_electrolyzer",
+      "name": "Electrolyzer puzzles",
+      "type": "bool",
+      "default": true,
+      "description": "Completes the Electrolyzer board after opening it in Challenge Mode."
+    },
+    {
+      "key": "skip_giant_clank",
+      "name": "Giant Clank battles",
+      "type": "bool",
+      "default": true,
+      "description": "Completes the Dobbo and Damosel orbital fights when the encounter starts in Challenge Mode."
+    }
+  ]
+}
